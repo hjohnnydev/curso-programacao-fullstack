@@ -1,0 +1,38 @@
+<form>
+    <input type="number" id="valorInicio" placeholder="valorInicio">
+    <input type="number" id="valorFim" placeholder="valorFim">
+    <input type="number" id="intervaloMaximo" placeholder="intervaloMaximo">
+
+    <input type="button" id="botaoDeAcao" value="Contar">
+</form>
+
+<script>
+    document.getElementById('botaoDeAcao').onclick = function(){
+        $valorInicio = parseInt(document.getElementById('valorInicio').value);
+        $valorFim = parseInt(document.getElementById('valorFim').value);
+
+        if(document.getElementById('intervaloMaximo').value == ''){
+            $intervaloMaximo = 0;
+        }
+        else{
+            $intervaloMaximo = parseInt(document.getElementById('intervaloMaximo').value);
+        }
+
+        if($intervaloMaximo > 0){
+            document.write('Contando de ' + $valorInicio + ' ate ' + $valorFim + ' com intervalo maximo de ' + $intervaloMaximo + '<br><br>');
+        }
+        else{
+            document.write('Contando de ' + $valorInicio + ' até ' + $valorFim + 'sem intervalo<br><br>');
+
+        }
+
+        if($intervaloMaximo > 0 && (($valorFim - $valorInicio) > $intervaloMaximo)){
+            $valorFim = $valorInicio + $intervaloMaximo;
+        }
+
+        for($contador = $valorInicio; $contador <= $valorFim; $contador++){
+            document.write($contador + '<br>');
+        }
+
+    }
+</script>

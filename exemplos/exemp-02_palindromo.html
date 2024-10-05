@@ -1,0 +1,25 @@
+<script>
+    $palavra = "ana";
+    $palavraInvertida = $palavra.split("").reverse().join(""); // ananab
+    
+    // document.write($palavra); banana
+    // document.write('$palavra'); // $palavra
+    document.write('A palavra informada pelo usuario foi: ' + $palavra);
+    // A palavra informada pelo usuario foi: banana
+    
+    document.write('<br>');
+    
+    if($palavra == $palavraInvertida){
+        document.write("<p>é um palindromo</p>");
+    }
+    else{
+        document.write("<p>não é um palindromo</p>");
+    }
+    
+    </script>
+    
+    <style>
+        p{
+            color:red;
+        }
+    </style>
