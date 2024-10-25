@@ -9,7 +9,9 @@
     <h1>Introdução à programação backend</h1>
 
     <?php
-        echo "ola Johnny";
+        echo "Ola Johnny";
+
+        echo '<br/>';
         
         // cria uma variavel ano_nascimeno
         $ano_nascimento = 1997;
@@ -25,6 +27,9 @@
         echo "Você possui " . $idade . " anos.";
 
     ?>
+
+    </br>
+    <a href="formulario.php">Ir para o formulário</a>
 
 </body>
 </html>
