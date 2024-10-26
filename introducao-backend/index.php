@@ -30,6 +30,8 @@
 
     </br>
     <a href="formulario.php">Ir para o formulário</a>
+    </br>
+    <a href="calculadora.php">Ir para o calculadora</a>
 
 </body>
 </html>

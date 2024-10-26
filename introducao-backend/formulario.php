@@ -9,7 +9,20 @@
     <pre>
     <form action="formulario.php" method="post">
         <label>Digite seu nome</label>
-        <input type="text" name="nome" required minlength="2"/>
+        <input type="text" name="nome" required minlength="2" pattern="^[A-Za-zé]+\s[A-Za-z]+"/>
+
+        <label>Digite seu telefone</label>
+        <input type="text" name="telefone"/>
+        
+        <label>Digite seu email</label>
+        <input type="text" name="email"/>
+
+        <input type="submit" value="Enviar para o servidor">
+    </form>
+
+    <form action="formulario.php" method="get">
+        <label>Digite seu nome</label>
+        <input type="text" name="nome" required minlength="2" pattern="^[A-Za-zé]+\s[A-Za-z]+"/>
 
         <label>Digite seu telefone</label>
         <input type="text" name="telefone"/>
@@ -35,7 +48,10 @@
             //Estamos imprimindo a mensagem de boas vindas.
             // Concatenamos uma string constante com a variável "$nome"
             echo '<p>Olá '.$nome.'! Seja bem vindo(a) </p>';
-        }
+        }elseif(isset($_GET['nome'])){
+            $nome = $_POST['nome'];
+            echo '<p>Olá '.$nome.'! Seja bem vindo(a) </p>';
+        }        
 
     ?>
 </body>
