@@ -9,7 +9,7 @@
     <pre>
     <form action="formulario.php" method="post">
         <label>Digite seu nome</label>
-        <input type="text" name="nome" required minlength="2" pattern="^[A-Za-zé]+\s[A-Za-z]+"/>
+        <input type="text" name="nome" required minlength="2" pattern="^[A-Za-záéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇüÜ]+\s?[A-Za-záéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇüÜ]*$" placeholder="ex: João Silva"/>
 
         <label>Digite seu telefone</label>
         <input type="text" name="telefone"/>
